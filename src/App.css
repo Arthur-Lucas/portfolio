@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+*,
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 29.2vw;
+  position: relative;
+}
+.toto {
+  font-size: 8vw;
+  position: absolute;
+  top: -3.5%;
+  left: 0.9%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title-page {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  padding: 10% 2.5% 0 2.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-content {
+  padding: 2.5%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  width: 100%;
+}
+
+/* CSS LINKS */
+
+.top-menu {
+  width: 100%;
+  height: 0vh;
+  position: absolute;
+  /* right: 0%; */
+  top: 0%;
+  /* bottom: 0%; */
+  z-index: 1000;
+  background-color: black;
+  transition: all 1s;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+}
+
+.navbar {
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  justify-content: center;
+}
+
+.navbar a {
+  cursor: default;
+}
+
+.navbar.open a {
+  cursor: pointer;
+}
+
+.link-text.open {
+  transform: translateY(0);
+  /* transition-: 1s; */
+  transition-duration: 0.3s;
+}
+
+.link-text {
+  position: relative;
+  transition: color 0.1s ease-in 0s;
+  transition: transform 0.1s ease-in 0s;
+  opacity: 0.2;
+  transform: translateY(55px);
+}
+
+.link:hover .link-text {
+  opacity: 1;
+  transition: color 0.1s ease-in 0s;
+}
+
+.link {
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+#line {
+  background-color: white;
+  width: 0px;
+  height: 0.5rem;
+  transition: 0.2s;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.content {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+
+.content2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.burgerMenu {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1001;
+}
+.burgerMenu span {
+  background-color: white;
+  display: block;
+  margin-bottom: 20%;
+  border-radius: 10%;
+
+  height: 2px;
+  width: 100%;
+}
+
+@keyframes openCloseNavMenu {
+  0% {
+    /* Styles au début de l'animation */
+    color: rgba(255, 255, 255, 0);
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    /* Styles à mi-chemin de l'animation */
+  }
+
+  100% {
+    /* Styles à la fin de l'animation */
   }
 }
