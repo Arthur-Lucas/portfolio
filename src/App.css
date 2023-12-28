@@ -76,7 +76,6 @@ h1 {
 
 .link-text.open {
   transform: translateY(0);
-  /* transition-: 1s; */
   transition-duration: 0.3s;
 }
 
@@ -101,7 +100,7 @@ h1 {
 #line {
   background-color: white;
   width: 0px;
-  height: 2rem;
+  height: 5vh;
   transition: 0.2s;
   position: absolute;
   top: 80%;

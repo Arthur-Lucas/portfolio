@@ -52,7 +52,7 @@ function App() {
                 className={`link-text ${bOpen ? "open" : ""}`}
                 style={
                   bOpen
-                    ? { transitionDelay: "1.3s" }
+                    ? { transitionDelay: "1.1s" }
                     : { transitionDelay: "0.2s" }
                 }
               >
@@ -65,7 +65,7 @@ function App() {
                 className={`link-text ${bOpen ? "open" : ""}`}
                 style={
                   bOpen
-                    ? { transitionDelay: "1.6s" }
+                    ? { transitionDelay: "1.4s" }
                     : { transitionDelay: "0.2s" }
                 }
               >
@@ -77,7 +77,7 @@ function App() {
                 className={`link-text ${bOpen ? "open" : ""}`}
                 style={
                   bOpen
-                    ? { transitionDelay: "1.9s" }
+                    ? { transitionDelay: "1.7s" }
                     : { transitionDelay: "0.2s" }
                 }
               >
@@ -89,7 +89,7 @@ function App() {
                 className={`link-text ${bOpen ? "open" : ""}`}
                 style={
                   bOpen
-                    ? { transitionDelay: "2.2s" }
+                    ? { transitionDelay: "2s" }
                     : { transitionDelay: "0.2s" }
                 }
               >
