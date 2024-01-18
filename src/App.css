@@ -9,14 +9,12 @@ body {
 }
 
 h1 {
-  font-size: 29.2vw;
-  position: relative;
-}
-.toto {
   font-size: 8vw;
-  position: absolute;
-  top: -3.5%;
-  left: 0.9%;
+}
+
+.arthur-title {
+  width: 20vw;
+  padding-bottom: 5px;
 }
 
 .title-page {
@@ -25,8 +23,9 @@ h1 {
   padding: 10% 2.5% 0 2.5%;
   height: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  position: relative;
+  max-height: 100vh;
 }
 
 .top-content {
@@ -51,7 +50,7 @@ h1 {
   transition: all 1s;
 
   font-family: "Bebas Neue", sans-serif;
-  font-size: 5vw;
+  font-size: 7vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +58,7 @@ h1 {
 }
 
 .navbar {
-  display: flex;
+  display: none;
   color: white;
   text-transform: uppercase;
   position: relative;
@@ -67,24 +66,24 @@ h1 {
 }
 
 .navbar a {
-  cursor: default;
-}
-
-.navbar.open a {
   cursor: pointer;
 }
 
+.navbar.open {
+  display: flex;
+}
+/* 
 .link-text.open {
   transform: translateY(0);
   transition-duration: 0.3s;
-}
+} */
 
 .link-text {
   position: relative;
   transition: color 0.1s ease-in 0s;
   transition: transform 0.1s ease-in 0s;
   opacity: 0.2;
-  transform: translateY(140px);
+  /* transform: translateY(140px); */
 }
 
 .link:hover .link-text {
@@ -93,14 +92,14 @@ h1 {
 }
 
 .link {
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   overflow: hidden;
 }
 
 #line {
   background-color: white;
   width: 0px;
-  height: 5vh;
+  height: 3vh;
   transition: 0.2s;
   position: absolute;
   top: 80%;
