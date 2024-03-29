@@ -1,7 +1,9 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ArthurW from "./ARTHURS-WHITE.svg";
 import PortfolioTitleW from "./PORTFOLIO-WHITE.svg";
+import gsap from "gsap";
+// import useGsap
 
 function App() {
   const [bOpen, setBOpen] = useState(false);
