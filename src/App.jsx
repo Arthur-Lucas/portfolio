@@ -11,7 +11,7 @@ function App() {
           <div className="cube">
             <div className="front">ArtHur</div>
             <div className="back">ArtHur</div>
-            <div className="top">Portfolio</div>
+            <div className="top">poRtfolio</div>
             <div className="bottom">poRtfolio</div>
           </div>
         </div>
