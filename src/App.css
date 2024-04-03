@@ -5,148 +5,76 @@ body {
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
-h1 {
-  font-size: 8vw;
-}
-
-.arthur-title {
-  width: 20vw;
-  padding-bottom: 5px;
-}
-
-.title-page {
-  font-family: "Bebas Neue", sans-serif;
-  color: white;
-  padding: 10% 2.5% 0 2.5%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  max-height: 100vh;
-}
-
-.top-content {
-  padding: 2.5%;
-  display: flex;
-  justify-content: end;
-  position: absolute;
-  width: 100%;
-}
-
-/* CSS LINKS */
-
-.top-menu {
-  width: 100%;
-  height: 0vh;
-  position: absolute;
-  /* right: 0%; */
-  top: 0%;
-  /* bottom: 0%; */
-  z-index: 1000;
-  background-color: black;
-  transition: all 1s;
-
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 7vw;
+header {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 100;
+  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: black; */
+  font-size: 8vw;
 }
 
-.navbar {
-  display: none;
-  color: white;
-  text-transform: uppercase;
+.cube-container {
+  perspective: 1000px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
   position: relative;
-  justify-content: center;
+  transform-style: preserve-3d;
+  /* transition: all 0.5s; */
+  animation: cubeRotation 16s infinite;
 }
 
-.navbar a {
-  cursor: pointer;
-}
-
-.navbar.open {
-  display: flex;
-}
-/* 
-.link-text.open {
-  transform: translateY(0);
-  transition-duration: 0.3s;
-} */
-
-.link-text {
-  position: relative;
-  transition: color 0.1s ease-in 0s;
-  transition: transform 0.1s ease-in 0s;
-  opacity: 0.2;
-  /* transform: translateY(140px); */
-}
-
-.link:hover .link-text {
-  opacity: 1;
-  transition: color 0.1s ease-in 0s;
-}
-
-.link {
-  padding: 0 2rem;
-  overflow: hidden;
-}
-
-#line {
-  background-color: white;
-  width: 0px;
-  height: 3vh;
-  transition: 0.2s;
+.front,
+.back,
+.top,
+.bottom {
   position: absolute;
-  top: 80%;
-  left: 0%;
-}
-
-.content {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 36px;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  position: relative;
-}
-
-.content2 {
-  width: 100%;
-  height: 100vh;
-}
-
-.burgerMenu {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
-  z-index: 1001;
-}
-.burgerMenu span {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  display: block;
-  margin-bottom: 20%;
-  border-radius: 10%;
-
-  height: 2px;
-  width: 100%;
 }
 
-@keyframes openCloseNavMenu {
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes cubeRotation {
   0% {
-    /* Styles au début de l'animation */
-    color: rgba(255, 255, 255, 0);
+    transform: rotateX(0deg);
   }
-
+  25% {
+    transform: rotateX(90deg);
+  }
   50% {
-    /* Styles à mi-chemin de l'animation */
+    transform: rotateX(180deg);
   }
-
+  75% {
+    transform: rotateX(270deg);
+  }
   100% {
-    /* Styles à la fin de l'animation */
+    transform: rotateX(360deg);
   }
 }
