@@ -28,6 +28,7 @@ function App() {
           </div>
         </div>
       </header>
+      <section></section>
     </div>
   );
 }
