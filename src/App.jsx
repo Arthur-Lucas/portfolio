@@ -1,9 +1,20 @@
 import "./App.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
+  const workSectionRef = useRef(null);
+  useEffect(() => {}, []);
+  const handleScrollToWork = () => {
+    workSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div>
+    <div className="Body">
+      <div className="sticky-bar">
+        <p>1</p>
+        <span></span>
+        <p>5</p>
+      </div>
       <header>
         <div className="topHeader"></div>
         <div className="cube-container">
@@ -15,7 +26,7 @@ function App() {
           </div>
         </div>
         <div className="scrollDown">
-          <div className="cube-scroll">
+          <div className="cube-scroll" onClick={handleScrollToWork}>
             <div className="cube">
               <div className="front"></div>
               <div className="back"></div>
@@ -28,7 +39,7 @@ function App() {
           </div>
         </div>
       </header>
-      <section></section>
+      <section className="WorkSection" ref={workSectionRef} id="work"></section>
     </div>
   );
 }

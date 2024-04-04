@@ -9,19 +9,42 @@ body {
   scroll-behavior: smooth;
 }
 
+.Body {
+  position: relative;
+}
+
+.sticky-bar {
+  font-family: "Major Mono Display", monospace;
+  position: fixed;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 2rem;
+  height: 11rem;
+  span {
+    width: 1px;
+    height: 6rem;
+    background-color: #343332;
+  }
+}
+
 header {
   font-family: "Major Mono Display", monospace;
   font-weight: 100;
   font-style: normal;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 8vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .cube-container {
@@ -212,3 +235,11 @@ header {
 } */
 
 /* Work */
+
+.WorkSection {
+  height: 100vh;
+  max-width: 100vw;
+  background-color: aqua;
+  // width: 100vw;
+  // overflow: hidden;
+}
