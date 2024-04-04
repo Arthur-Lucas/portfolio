@@ -16,12 +16,15 @@ function App() {
         </div>
         <div className="scrollDown">
           <div className="cube-scroll">
-            <div className="front"></div>
-            <div className="back"></div>
-            <div className="top"></div>
-            <div className="bottom"></div>
-            <div className="right"></div>
-            <div className="left"></div>
+            <div className="cube">
+              <div className="front"></div>
+              <div className="back"></div>
+              <div className="top"></div>
+              <div className="bottom"></div>
+              <div className="right"></div>
+              <div className="left"></div>
+              <i class="fa-solid fa-arrow-down arrow"></i>
+            </div>
           </div>
         </div>
       </header>
