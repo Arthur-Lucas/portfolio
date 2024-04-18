@@ -16,6 +16,13 @@ function App() {
         <p>5</p>
       </div>
       <header>
+        <div className="right-menu">
+          <a>MAIL</a>
+          <span></span>
+          <a>GITHUB</a>
+          <span></span>
+          <a>INSTAGRAM</a>
+        </div>
         <div className="topHeader"></div>
         <div className="cube-container">
           <div className="cube1">
