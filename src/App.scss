@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: "CASTELAR";
-  src: url(../public/fonts/CASTELAR.ttf);
+  src: url(./fonts/CASTELAR.ttf);
 }
 
 .Body {
@@ -38,7 +38,6 @@ body {
 }
 
 header {
-  font-family: "Major Mono Display", monospace;
   font-weight: 100;
   font-style: normal;
   height: 100vh;
@@ -52,8 +51,11 @@ header {
   overflow-x: hidden;
   max-width: 100vw;
   position: relative;
-
+  .cube1 {
+    font-family: "Major Mono Display", monospace;
+  }
   .right-menu {
+    animation: rightMenuLoad 1.5s 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,6 +166,17 @@ header {
   }
 }
 
+@keyframes rightMenuLoad {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateX(0px);
+  }
+}
+
 /* Second cube */
 
 .scrollDown,
@@ -270,6 +283,14 @@ header {
   width: 100%;
   height: 200px;
 } */
+
+/* MeSection */
+
+.MeSection {
+  height: 100vh;
+  max-width: 100vw;
+  background-color: pink;
+}
 
 /* Work */
 
